@@ -1,0 +1,50 @@
+<!-- 
+Мы хотим написать примерно такое приложение: https://jsfiddle.net/v90zqtLf/2/
+Таким образом:
+1 Пользователь должен иметь возможность выбрать интервал от 59 минут 59 секунд до 0 секунд.
+2 Минимум 3 кнопки — увеличить время, уменьшить время, запустить таймер.
+3 Будет плюсом использовать тэг input, прерывать выполнение таймера, обрабатывать возможные юзер кейсы.
+4 По окончании работы таймера вывести текст о успешном завершении.
+5 В коде вы должны использовать объекты и функцию-конструктор, либо описать все императивно (как в примере выше).
+6 Использование фреймворков или хэлпера из прошлых уроков, который вы дополните собственными методами, будет плюсом =)
+P.S. Из заготовки можно без зазрения совести взять html и css. Можно "потыкать" пример и понять основную логику работы. Можно рефакторить код и добавить собственные методы. Можно понять основную логику и сделать лучше. 
+
+Выбрать Minutes|Seconds - управляемые кнопками plus|minus
+Ввести Minutes|Seconds через соответсвующие input-ы
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C1-11-HW-countdown</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <h1 class="countdown-title">Countdown Clock</h1>
+    <section class="countdown">
+        <input class="input-minutes" type="text" maxlength="2" min="0" max="59" size="2"/>
+        <div class="countdown-minutes">
+            <p class="minutes countdown-time" id="minutes"></p>
+            <p class="countdown-text">Minutes</p>
+        </div>
+        <div class="countdown-seconds">
+            <p class="seconds countdown-time" id="seconds"></p>
+            <p class="countdown-text">Seconds</p>
+        </div>
+        <input class="input-seconds" type="text" maxlength="2" min="0" max="59" size="2"/>
+
+    </section>
+
+    <div>
+        <button class="plus">plus</button>
+        <button class="minus">minus</button>
+        <button class="start">start</button>
+        <button class="stop">stop</button>
+    </div>
+
+    <div class="message"></div>
+
+    <script src="countDown.js" type="text/javascript"></script>
+</body>
+</html>
